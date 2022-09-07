@@ -35,7 +35,7 @@ class CallKitCenter: NSObject {
             let plist = NSDictionary(contentsOfFile: path)
             self.iconName = plist?["FIVKIconName"] as? String ?? "AppIcon-VoIPKit"
             self.localizedName = plist?["FIVKLocalizedName"] as? String ?? "App Name"
-            self.supportVideo = plist?["FIVKSupportVideo"] as? Bool ?? false
+            self.supportVideo = true
             self.skipRecallScreen = plist?["FIVKSkipRecallScreen"] as? Bool ?? false
             self.maximumCallGroups = plist?["FIVKMaximumCallGroups"] as? Int ?? 1
         } else {
